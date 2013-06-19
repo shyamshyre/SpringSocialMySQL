@@ -1,5 +1,5 @@
-Spring Social Showcase Security (XML)
-=====================================
+Spring Social Showcase Security (XML) For MYSQL DATABASE
+=========================================================
 This sample app demonstrates many of the capabilities of the Spring Social project, including:
 * Connect to Facebook
 * Connect to Twitter
@@ -51,9 +51,9 @@ For Configuring the Spring Social into mysql database do the following Changes
 
 This loads the mysql related jar into your workspace.
 
-5) Last Step Copy the following table and paste it into your local database.
+5) Last Step Copy the following queries and paste it into your local database.
 
- CREATE TABLE UserConnection (userId VARCHAR(255) NOT NULL,
+5.1 CREATE TABLE UserConnection (userId VARCHAR(255) NOT NULL,
 	providerId VARCHAR(255) NOT NULL,
 	providerUserId VARCHAR(255),
 	rank INT NOT NULL,
@@ -67,10 +67,14 @@ This loads the mysql related jar into your workspace.
 	PRIMARY KEY (userId, providerId, providerUserId));
  CREATE UNIQUE INDEX UserConnectionRank ON UserConnection(userId, providerId, rank);
  
- CREATE TABLE Account (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(10) UNIQUE,PASSWORD VARCHAR(10) NOT NULL,firstName VARCHAR(10) NOT NULL, lastName VARCHAR(10) NOT NULL, PRIMARY KEY (id));
+5.2 CREATE TABLE Account (id INT NOT NULL AUTO_INCREMENT,username VARCHAR(10) UNIQUE,PASSWORD VARCHAR(10) NOT NULL,firstName VARCHAR(10) NOT NULL, lastName VARCHAR(10) NOT NULL, PRIMARY KEY (id));
 
 Following tables are required during authentication and authorization of user credentials.
 
+5.3 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' 
+    IDENTIFIED BY  'root' 
+    WITH GRANT OPTION;
+FLUSH PRIVILEGES;
  
 
 
