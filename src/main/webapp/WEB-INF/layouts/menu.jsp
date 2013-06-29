@@ -26,9 +26,22 @@
 </ul>
 </social:connected>
 
+
+
+
 <h4><a href="<c:url value="/linkedin"/>">LinkedIn</a></h4>
 <social:connected provider="linkedin">
 <ul class="menu">
 	<li><a href="<c:url value="/linkedin"/>">User Profile</a></li>
+</ul>
+</social:connected>
+
+<h4><a href="<c:url value="/common/showfeed"/>">Social</a></h4>
+<social:connected provider="facebook,twitter,linkedin">
+<ul class="menu">
+	<li><a href="<c:url value="/common/showfeed"/>">PostSocial Posts</a></li>
+	<li><a href="<c:url value="/facebook"/>">FaceBook Charts</a></li>
+	<li><a href="<c:url value="/facebook/feed"/>">Twitter Charts</a></li>
+	<li><a href="<c:url value="/facebook/friends"/>">Linkedin Charts</a></li>
 </ul>
 </social:connected>
