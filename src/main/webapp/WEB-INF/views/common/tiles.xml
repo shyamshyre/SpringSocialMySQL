@@ -3,8 +3,11 @@
 
 <tiles-definitions>
 
-	<definition name="common/create" extends="page">
-		<put-attribute name="content" value="/WEB-INF/views/common/create.jsp" />
+	<definition name="common/postfeed" extends="page">
+		<put-attribute name="content" value="/WEB-INF/views/common/postfeed.jsp" />
+	</definition>
+	<definition name="common/showfeed" extends="page">
+		<put-attribute name="content" value="/WEB-INF/views/common/postfeed.jsp" />
 	</definition>
 
 </tiles-definitions>
