@@ -32,5 +32,13 @@ public class PostFeed {
 	public void setLipost(String lipost) {
 		this.lipost = lipost;
 	}
+	
+	public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("twpost=").append(twpost).append(",");
+        sb.append("fbpost=").append(fbpost).append(",");
+        sb.append("lipost=").append(lipost).append(",");
+        return sb.toString();
+    }
 
 }
